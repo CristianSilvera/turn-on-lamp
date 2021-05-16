@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import lighton from './component/img/turn-on.jpg';
-import lightoff from './component/img/turn-off.jpg';
+import Lamp from './component/Lamp'
 import './App.css';
 
 function App() {
@@ -10,10 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={turnOn?lighton:lightoff} className="App-lighton" alt="lighton" />
-        
-        <br></br><br></br>
-        <button onClick={() => setTurnOn(!turnOn)}>{turnOn?'Turn On':'Turn Off'}</button>
+        <Lamp turnOn={turnOn} setTurnOn={setTurnOn}/>
         <p>
           Bootcamp <code>challenge</code> Moove-it and Utec.
         </p>
